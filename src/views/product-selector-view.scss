@@ -1,0 +1,76 @@
+// Custom styles applied only to the ProductSelectorView partial view
+
+.product-selector-view {
+  padding: 45px 30px;
+  min-height: 500px;
+  height: 100vh;
+
+  .panel-stack {
+    padding: 36px 24px 36px 36px;
+    box-shadow:
+      0 1px 3px 0 rgba(60, 64, 67, 0.3),
+      0 4px 8px 3px rgba(60, 64, 67, 0.15);
+    border-radius: 36px;
+
+    .panel-stack-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      button {
+        width: 100%;
+        padding: 16px 24px;
+        border-radius: 24px;
+        background: #f8fafd;
+        border: none;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          background: #eaf1fa;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: inset 0 0 0 2px #0066cc;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 12px;
+
+          right: 24px;
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+          border-top: 2px solid #333;
+          border-right: 2px solid #333;
+        }
+
+        h5,
+        p {
+          margin: 0;
+        }
+
+        h5 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 14px;
+          padding-top: 4px;
+
+          span {
+            margin: 0 4px;
+            color: #888888;
+          }
+        }
+      }
+    }
+  }
+}

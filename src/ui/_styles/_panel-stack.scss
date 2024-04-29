@@ -1,0 +1,77 @@
+// PanelStack Component Style Defs
+
+.panel-stack {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  background: $color-white;
+
+  header {
+    width: 40%;
+
+    h1 {
+      margin-left: 16px;
+      margin-bottom: 36px;
+    }
+
+    .panel-stack-header {
+      height: 80px;
+      padding-left: 36px;
+      position: relative;
+
+      .panel-stack-header-index {
+        left: 16px;
+        position: absolute;
+        display: inline-block;
+
+        font-weight: 600;
+        text-align: center;
+        line-height: 24px;
+        font-size: 16px;
+
+        color: $color-gray;
+      }
+
+      h3,
+      h4 {
+        margin: 0;
+        color: $color-gray;
+      }
+
+      &.active h3,
+      &.active h4,
+      &.active .panel-stack-header-index {
+        color: $color-primary;
+      }
+
+      &.completed h3,
+      &.completed h4,
+      &.completed .panel-stack-header-index {
+        color: $color-gray-dark;
+      }
+
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  main {
+    width: 60%;
+    overflow-y: scroll;
+
+    .panel-stack-content {
+      &:not(.active) {
+        display: none;
+      }
+    }
+  }
+}
